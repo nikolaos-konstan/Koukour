@@ -35,38 +35,38 @@ function App() {
     return timeLeft;
   }
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-2xl bg-yellow-200 text-black space-y-4">
-      <div className="p-4 bg-red-200 rounded w-64 text-center text-4xl">
-        <span className="font-bold">Koukouri's νόστιμον ἦμαρ</span>
+    <div className="font-josefin flex flex-col items-center justify-center h-screen text-2xl bg-yellow-200 text-black space-y-4">
+      <div className="font-josefin p-4 bg-red-200 rounded w-64 text-center text-4xl sm:text-2xl">
+        <span className="font-bold ">Koukouri's νόστιμον ἦμαρ</span>
       </div>
       {timeLeft.days === 0 &&
       timeLeft.hours === 0 &&
       timeLeft.minutes === 0 &&
       timeLeft.seconds === 0 ? (
-        <div className="p-4 bg-red-200 rounded w-64 text-center text-4xl">
+        <div className="p-4 bg-red-200 rounded w-64 text-center text-4xl sm:text-2xl">
           <span className="font-bold">Welcome!</span>
         </div>
       ) : (
-        <div className="flex items-center justify-center space-x-4">
-          <div className="p-4 bg-red-200 rounded w-32 h-24 flex flex-col justify-center items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="p-4 bg-red-200 rounded flex flex-col justify-center items-center">
             <div>{timeLeft.days}</div>
             <div>
               <span className="font-bold">Days</span>
             </div>
           </div>
-          <div className="p-4 bg-red-200 rounded w-32 h-24 flex flex-col justify-center items-center">
+          <div className="p-4 bg-red-200 rounded flex flex-col justify-center items-center">
             <div>{timeLeft.hours}</div>
             <div>
               <span className="font-bold">Hours</span>
             </div>
           </div>
-          <div className="p-4 bg-red-200 rounded w-32 h-24 flex flex-col justify-center items-center">
+          <div className="p-4 bg-red-200 rounded flex flex-col justify-center items-center">
             <div>{timeLeft.minutes}</div>
             <div>
               <span className="font-bold">Minutes</span>
             </div>
           </div>
-          <div className="p-4 bg-red-200 rounded w-32 h-24 flex flex-col justify-center items-center">
+          <div className="p-4 bg-red-200 rounded flex flex-col justify-center items-center">
             <div>{timeLeft.seconds}</div>
             <div>
               <span className="font-bold">Seconds</span>
@@ -74,7 +74,7 @@ function App() {
           </div>
         </div>
       )}
-      <img src={image} alt="Descriptive text" />
+      <img src={image} alt="Descriptive text" className="w-full sm:w-auto" />
     </div>
   );
 }
